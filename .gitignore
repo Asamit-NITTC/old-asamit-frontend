@@ -67,3 +67,5 @@ node_modules/
 
 # Production
 dist
+
+.env-cmdrc.json

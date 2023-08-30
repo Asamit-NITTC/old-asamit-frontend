@@ -3,7 +3,6 @@ const functions = require("firebase-functions");
 const axios = require("axios");
 const app = express();
 const port = 3000;
-require("dotenv").config();
 
 const NODE_ENV = process.env.NODE_ENV;
 const REDIRECT_URI = process.env.REDIRECT_URI;
