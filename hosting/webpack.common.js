@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/client/index.js'), //エントリポイント
+    entry: path.resolve(__dirname, './index.js'), //エントリポイント
     output: {
         path: path.resolve(__dirname,  './dist'),
         //path: path.resolve('dist'),
@@ -27,7 +27,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'src', 'client', 'public', 'index.html'),
+            template: path.join(__dirname, 'public', 'index.html'),
             filename: './index.html'
         }),
     ],
