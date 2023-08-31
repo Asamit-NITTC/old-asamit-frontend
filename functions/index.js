@@ -54,27 +54,23 @@ app.get("/api/callback", (req, res) => {
         .catch((err) => {
           throw new Error("Failed to get user profile" + err.message);
         });
+      /*
       res.writeHead(200, {
         "Content-Type": "application/json",
       });
+      */
       console.log(issueAccessToken.data);
-      res.write("profile: " + JSON.stringify(getUserProfile.data));
-      res.write("\nidToken: " + JSON.stringify(issueAccessToken.data.id_token));
-      res.end();
+      res.send("profile: " + JSON.stringify(getUserProfile.data)
+        +"\nidToken: " + JSON.stringify(issueAccessToken.data.id_token));
     } catch (err) {
-      res.writeHead(500, {
-        "Content-Type": "text/plain",
-      });
       console.log(err);
-      res.write("Error");
-      res.end();
+      res.status(500).send("Error")
     }
   })();
 });
 
 app.get("/api/*", (req, res) => {
-  res.write("Error");
-  res.end();
+  res.send("Error");
 });
 
 if (NODE_ENV === "development") {
