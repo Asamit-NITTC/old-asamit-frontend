@@ -1,7 +1,7 @@
 {
   "hosting": {
     "target": "main",
-    "public": "dist",
+    "public": "./hosting/dist",
     "rewrites": [{
       "source": "/api/**",
       "function": "app"
@@ -19,7 +19,7 @@
   },
   "functions": [
     {
-      "source": "src/server",
+      "source": "functions",
       "codebase": "default",
       "ignore": [
         "node_modules",
