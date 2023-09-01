@@ -24,6 +24,9 @@ module.exports = merge(common,  {
         historyApiFallback: true, // これ重要
         host: 'localhost',
         port: 8080,
+        allowedHosts: [
+          ".ngrok-free.app"
+        ],
         proxy: {
             '/api/**': {
                 target: 'http://localhost:3000',
