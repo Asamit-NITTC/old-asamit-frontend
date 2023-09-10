@@ -9,11 +9,8 @@
 ## Getting Started
 First, prepare .env file and set API key.
 ```sh
-touch .env
-echo "REDIRECT_URI=localhost:8080/api/callback" >> .env
-echo "CLIENT_ID=xxxxxxxxxx" >> .env
-echo "CLIENT_SECRET=xxxxxxxxxxxxxxxxxx" >> .env
-echo "REACT_APP_LIFF_ID=xxxxxxxxxxxxx" >> .env
+touch hosting/.env
+echo "REACT_APP_LIFF_ID=xxxxxxxxxxxxx" >> hosting/.env
 ```
 Second, install dependencies.
 And then run the development server:
@@ -21,6 +18,8 @@ And then run the development server:
 npm i
 npm run dev
 ```
+*これより下は用いない*
+-------
 
 ## Setup
 You must install `Firebase CLI`
